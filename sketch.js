@@ -2,7 +2,7 @@ function setup() {
   createCanvas(800,450);
   $.get("exampledata.json", 
         function(data){
-          document.geti("datafromjson").innerHTML=data.json();
+          document.getElementById("datafromjson").innerHTML=data.json();
         }
        ,"json")
 }
