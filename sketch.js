@@ -5,6 +5,7 @@ function setup() {
           for(i=0;i++;i<data.length){
             document.getElementById("datafromjson").innerHTML+=data[i].name+"<br>";
           }
+        }
        ,"json")
 }
 
