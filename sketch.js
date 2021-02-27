@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(800,450);
   $.get("exampledata.json", function(data){
-    console.log(data);
+    document.geti("datafromjson")=data.json();
   })
 }
 
