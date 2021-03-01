@@ -26,3 +26,10 @@ i had read about errors in applying trigonometric functions to very large values
 ----
 
 all position values are set to -1 in the data, so that in the case they aren't initialised, an error message can be shown
+
+----
+
+on this SUPER SPECIAL SECRET EDITION, all distances between planet orbits are the same, instead of being based on their actual orbital radii
+this should help scaling with the outer planets
+there's potential for overlapping planets with the magic values i've plugged in so far
+therefore i will change the magic values later if they are bad

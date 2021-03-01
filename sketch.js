@@ -31,8 +31,8 @@ function draw() {
   t++;
   for (var i=0;i<data.length;i++){
     //update positions
-    data[i].xpos=w/2+data[i].semimajoraxis*200*Math.sin((t*PI/(180*data[i].orbitperiod))%TWO_PI);
-    data[i].ypos=h/2-data[i].semimajoraxis*200*Math.cos((t*PI/(180*data[i].orbitperiod))%TWO_PI);
+    data[i].xpos=w/2+i*50*Math.sin((t*PI/(180*data[i].orbitperiod))%TWO_PI);
+    data[i].ypos=h/2-i*50*Math.cos((t*PI/(180*data[i].orbitperiod))%TWO_PI);
     if (data[i].xpos != -1 && data[i].ypos != -1){ //makes sure my values are initialised
       fill(data[i].colour);
       noStroke();
