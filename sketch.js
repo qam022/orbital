@@ -4,7 +4,6 @@ var t=0;
 var tracks = [];
 var frameRateDisplay = false;
 function setup() {
-  frameRate(60);
   w=windowWidth*0.75;
   h=windowHeight*0.95;
   createCanvas(w,h);
@@ -34,11 +33,12 @@ function setup() {
 
 function draw() {
   background("#16161d");
-  t++;
+  speed = document.getElementById("speed").valueAsNumber;
+  t+=speed;
   for (var i=0;i<data.length;i++){
     //update positions
-    data[i].xpos=w/2+i*50*Math.sin((t*0.62*PI/(180*data[i].orbitperiod))%TWO_PI);
-    data[i].ypos=h/2-i*50*Math.cos((t*0.62*PI/(180*data[i].orbitperiod))%TWO_PI);
+    data[i].xpos=w/2+i*50*Math.sin((t*0.4*PI/(180*data[i].orbitperiod))%TWO_PI);
+    data[i].ypos=h/2-i*50*Math.cos((t*0.4*PI/(180*data[i].orbitperiod))%TWO_PI);
     if (data[i].xpos != -1 && data[i].ypos != -1){ //makes sure my values are initialised
       fill(data[i].colour);
       noStroke();
