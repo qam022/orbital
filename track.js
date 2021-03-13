@@ -4,8 +4,8 @@ class Track{
         this.x = x;
         this.y = y;
         this.alpha = 255;
-        this.maxLifetime = 400;
-        this.lifetime = this.maxLifetime; //in frames 
+        this.maxLifetime = 80;
+        this.lifetime = this.maxLifetime; //in frames
     }
     set settrackAlpha(newalpha){
         this.alpha = newalpha;

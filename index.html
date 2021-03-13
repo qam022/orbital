@@ -10,11 +10,14 @@
     <script src="sketch.js"></script>
     <script src="datagetter.js"></script>
     <script src="track.js"></script>
+    <script src="databox.js"></script>
   </head>
   <body>
     <div id="controls">
-      <label for="speed">Simulation speed (between 0 and 3)</label>
-      <input type="range" id="speed" step="0.1" value="1" min="0" max="5">
+      <label for="speed">Simulation speed (between 0 and 20)</label>
+      <input type="range" id="speed" step="0.1" value="1" min="0" max="20"><br>
+      <label for="drawTracks">Draw tracks? (may be slow on low-performance computers)</label>
+      <input type="checkbox" id="drawTracks">
     </div>
   </body>
 </html>

@@ -11,7 +11,7 @@ this is because modern browsers block requests that aren't using https, which in
 
 constants in the draw function deciding where to draw planets on the screen were decided based on what looked nice
 i had originally wanted spacing to scale, but not planet sizes
-but after drawing just mercury and venus, i decided this was not feasible -- the gaps between the outer planets are too large, and having them look good would force the gaps 
+but after drawing just mercury and venus, i decided this was not feasible -- the gaps between the outer planets are too large, and having them look good would force the gaps
 between the inner planets to be tiny
 
 ----
@@ -33,3 +33,17 @@ on this SUPER SPECIAL SECRET EDITION, all distances between planet orbits are th
 this should help scaling with the outer planets
 there's potential for overlapping planets with the magic values i've plugged in so far
 therefore i will change the magic values later if they are bad
+
+----
+
+jupiter and saturn were way too big when drawing all planets to scale, so i had to scale them differently (this is
+written before adding uranus and neptune), to avoid them overlapping the inner planets.
+they still overlap eachother, but this probably doesnt happen often enough to matter that much.
+
+----
+
+when writing the click detection code, i remembered that saturn and jupiter have a habit of overlapping
+so when iterating through the planets to check which one is being clicked, i iterated through the opposite
+way to the direction in which they are drawn, so that the code detects a click on the planet drawn later
+
+this means that the planet on which the click is detected is the one drawn on top, which just makes more sense
